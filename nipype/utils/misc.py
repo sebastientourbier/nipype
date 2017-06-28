@@ -3,7 +3,10 @@
 # vi: set ft=python sts=4 ts=4 sw=4 et:
 """Miscellaneous utility functions
 """
-from __future__ import print_function, division, unicode_literals, absolute_import
+
+from __future__ import division, absolute_import
+# from __future__ import print_function, division, unicode_literals, absolute_import # Retrocompatibility with python 2
+
 from future import standard_library
 standard_library.install_aliases()
 from builtins import next, str
