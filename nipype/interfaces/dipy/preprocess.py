@@ -298,7 +298,7 @@ def nlmeans_proxy(in_file, settings,
         den[..., i] = nlmeans(d, snr[i], **settings)
 
     den = np.squeeze(den)
-    den /= df
+    den = den / df
 
     nb.Nifti1Image(den.astype(hdr.get_data_dtype()), aff,
                    hdr).to_filename(out_file)
